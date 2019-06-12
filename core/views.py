@@ -10,7 +10,7 @@ from django.http import HttpResponse, StreamingHttpResponse
 from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
 
-from guacamole.client import GuacamoleClient
+from .guacamole.client import GuacamoleClient
 
 logger = logging.getLogger(__name__)
 sockets = {}
@@ -100,7 +100,7 @@ def _do_write(request, cache_key):
         while True:
             chunk = request.read(8192)
             if chunk:
-                client.send(chunk)
+                client.send(chunk.decode())
             else:
                 break
 
