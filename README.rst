@@ -4,7 +4,7 @@ guacamole-django-client
 
 A django project, python version of project guacamole-client, for communication with `Guacamole <http://guac-dev.org/>`_ server (guacd)
 
-Support Python 2.7
+Support Python 3.7
 
 Installation
 ============
